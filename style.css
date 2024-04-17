@@ -1,0 +1,52 @@
+ body{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    background-color: black;
+    border-radius: 10px;
+}
+.logo-image{
+    width: 50px;
+    height: 50px;
+    padding-left: 5%;
+}
+.lien{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    display: flex;
+    margin-top: -2%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+@media screen and (max-width: 680px) {
+    .menu{
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        background-color: black;
+        border-radius: 10px;
+    }
+    .lien{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* overflow-y: scroll;
+        ov */
+        gap: 20px;
+        color: white;
+        display: flex;
+        margin-top: -2%;
+    }
+    
+} 
+

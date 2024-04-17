@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather+Sans:wght@400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  color: #040000;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+.rouge{
+  color: red;
+  border-spacing: 10px;
+}
+/* **************** Css de la page d'acceuil ***************** */
+h1,
+h2,
+h3 {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+h3{
+  color: rgb(185, 54, 14);
+  font-weight: bold;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.header_section{
+ background: white;
+ box-shadow: 0 8px 16px rgb(0, 0, 0, 0.5);
+}
+
+/*header section*/
+.hero_area {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  /* background-color: #36A98A; */
+} 
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-brand img{
+    width: 70px;
+    height: 70px;
+}
+
+.nav-link {
+  padding: 10px 25px;
+  color: #000000;
+  text-align: center;
+  background-color: #ff8a1d;
+  border-radius: 15px;
+  transition: background-color 200ms ease-in-out,
+  transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/*fin header section*/
+
+/* slider section */
+.slider_section {
+   margin-top: 100px;
+}
+
+
+.slider_section{
+  /* color: white; */
+  font-size: 20px;
+}
+.detail-box, h1{
+  font-size: 25px;
+}
+.detail-box p {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 16px;
+}
+
+.slider_section .detail-box a {
+  display: inline-block;
+  font-family: 'Merriweather Sans', sans-serif;
+  text-transform: uppercase;
+  padding: 10px 45px;
+  background-color: #ff8a1d;
+  border: 1px solid #ff8a1d;
+  border-radius: 5px;
+  color: #ffffff;
+  margin-top: 15px;
+} 
+
+/* ********************* Fin css de la page d'acceuil ************************* */
+/* ********************* Css de la page de connexion et inscription************* */
+.header_con{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.header{
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-position: left;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+}
+
+.inp{
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 30%;
+  height: 40px;
+}
+
+.inp:focus {
+    outline: none;
+}
+
+.probable{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  flex-wrap: wrap;
+}
+.fiable{
+  width: 30%;
+  padding: 2%;
+  font-weight: bolder;
+}
+
+.fiable a{
+  text-decoration: none;
+  color: #009688;
+}
+
+.fiable a:hover{
+  text-decoration: none;
+  color: #009688;
+}
+
+.bak, .m-oublie{
+  color: #009688;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.vote{
+  color: #F89617;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button{
+  text-align: center;
+  background-color: #009688;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.button:hover{
+  text-decoration: none;
+  color: white;
+}
+/* mot de pass oublié */
+.envoie{
+  width: 10%;
+  height: 40px;
+  background-color: #009688;
+  border: none;
+  cursor: pointer;
+}
+.arriere{
+  text-decoration: none;
+  font-size: 30px;
+}
+/* inscription */
+.header{
+  display: flex;
+  flex-direction: column;
+}
+.logo-ins{
+  width: 7%;
+  height: 80px;
+}
+.inscription{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url("../images/vot.jpeg");  */
+  background-position: left;
+  background-size: 90%;
+  margin-top: -10%;
+}
+.inpt{
+  border: none;
+  border-bottom: 5px solid #F89617;
+  width: 50%;
+  background-color: rgba(68, 63, 63, 0.234);
+  color: black;
+  font-weight: bold;
+  height: 40px;
+  font-size: 30px;
+}
+
+.inpt:focus{
+  outline: none;
+}
+
+.h3-inscription{
+  font-weight: bold;
+  color: #009688;
+  font-size: 50px;
+  padding: 10px;
+}
+marquee{
+  font-weight: bold;
+  color: #F89617;
+  font-size: 30px;
+}
+label{
+  color: white;
+  font-size: 60px;
+}
+select{
+  font-size: 35px ;
+}
+.sub-arriere{
+  margin-top: 20px;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+.valide{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  width: 30%;
+  height: 50px;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: #F89617;
+  border: none;
+  cursor: pointer;
+}
+.valide:hover, .revenir:hover{
+  background-color: #F89617;
+  color: #009688;
+  font-size: 30px;
+  width: 50%;
+}
+.revenir{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  width: 30%;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: #F89617;
+}
+
+#MainForm{
+  transform: translateY(-8%);
+}
+
+#pad{
+  background-color: #28AF60;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+#pad:hover{
+ background-color: #19222F;
+}
+#submit{
+  background-color: #28AF60;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+#submit:hover{
+ background-color: #19222F;
+}
+
+
+@media screen and (max-width: 680px) {
+  button{
+      background-color: #009688;
+      color: white;
+      border: none;
+      width: 80%;
+      height: 30px;
+      font-size: 100%;
+  }
+
+  #pad{
+    padding: 5px 10px;
+  }
+  .inp{
+      border: none;
+      border-bottom: 1px solid grey;
+      width: 70%;
+      height: 40px;
+  }
+  .probable{
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      flex-wrap: wrap;
+      padding: 10px;
+  }
+  .m-oublie{
+      padding: 20px;
+      text-align: center;
+  }
+  .fiable{
+      width: 100%;
+      padding: 2%;
+      text-align: center;
+  }
+  .envoie{
+      width: 30%;
+      font-size: 30px;
+      height: 40px;
+      background-color: #009688;
+      border: none;
+      cursor: pointer;
+  }
+  .envoie{
+      width: 40%;
+      height: 40px;
+      background-color: #009688;
+      border: none;
+      cursor: pointer;
+  }
+  .arriere{
+      text-decoration: none;
+      width: 50%;
+      padding: 10px;
+      font-size: 30px;
+  }
+  .arriere{
+      text-align: center;
+      margin-top: 5%;
+      font-size: 20px;
+  }
+  .inscription{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* background-color: #009688; */
+      background-position: bottom;
+      background-size: 100%;
+  }
+  .logo-ins{
+      width: 30%;
+      height: 80px;
+      margin-top: -15%;
+  }
+  .h3-inscription{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-size: 100%;
+      font-weight: bold;
+      height: 30px;
+  }
+  .inpt{
+      border: none;
+      border-bottom: 1px solid grey;
+      width: 100%;
+      /* background-color: #009688; */
+      color: white;
+      font-weight: bold;
+      /* height: 40px; */
+      font-size: 30px;
+      /* opacity: 0.7; */
+  }
+  select{
+      font-size: 35px ;
+  }
+  label{
+      color: #F89617;
+      font-size: 30px;
+      font-weight: bold;
+
+  }
+  .sub-arriere{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+  }
+  .valide{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 10px;
+      width: 30%;
+      height: 40px;
+      justify-content: center;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      background-color: #F89617;
+      cursor: pointer;
+  }
+  .valide, .revenir:hover{
+      background-color: #F89617;
+      color: #009688;
+      font-size: 30px;
+      width: 50%;
+  }
+  .revenir{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 15px;
+      width: 40%;
+      justify-content: center;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      background-color: #F89617;
+  }
+
+  .bak{
+    font-size: 20px;
+    color: #28AF60;
+  }
+
+  #h1{
+    font-size: 20px;
+    
+  }
+
+  #submit{
+    padding-bottom: 30px;
+  }
+  
+}
+
+/* ***************** Fin CSS de la page de connexion et inscription *********** */

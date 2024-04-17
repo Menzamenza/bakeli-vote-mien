@@ -1,0 +1,279 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 100;
+  /* overflow: scroll; */
+  background-image: url("../images/vot.jpeg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+
+.header_section{
+  background: white;
+  box-shadow: 0 8px 16px rgb(0, 0, 0, 0.5);
+ }
+ 
+ /*header section*/
+ .hero_area {
+   width: 100%;
+   height: 100vh;
+   position: relative;
+   background-color: #36A98A;
+ } 
+ 
+ .navbar{
+    display: flex;
+    flex-direction: row;
+ }
+ 
+ .navbar-nav {
+   margin-left: auto;
+   list-style: none;
+ }
+ 
+ .navbar-brand img{
+     width: 70px;
+     height: 70px;
+ }
+ 
+ .nav-link {
+   text-decoration: none;
+   padding: 10px 25px;
+   color: #000000;
+   text-align: center;
+   background-color: #ff8a1d;
+   border-radius: 15px;
+   transition: background-color 200ms ease-in-out,
+   transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+ 
+ .nav-link:hover {
+   cursor: pointer;
+   transform: scale(1.1);
+ }
+ 
+ /*fin header section*/
+
+main{
+  overflow-y: scroll;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+    color: black;
+    text-align: center;
+}
+.container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.tables{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  width: 300px;
+  height: 400px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgb(0, 0, 0, 0.5);
+  background-color: #ffffffd8;
+}
+caption{
+    background-color: #36A98A;
+    opacity: 0.8;
+    color: black;
+    opacity: 0.8;
+    font-weight: 900;
+    font-size: 25px;
+    padding: 12px;
+}
+th{
+  color: black;
+  padding: 16px;
+  font-size: 15;
+}
+
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.397);
+  color: black;
+}
+th {
+  text-align: left;
+}
+thead th {
+  background-color:  #ff8a1d72;
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+tbody td {
+  position: relative;
+}
+
+.table1 table td,
+.table2 table td,
+.table4 table td,
+.table5 table td,
+.table6 table td{
+  padding: 0px;
+  text-align: center;
+}
+
+.buttn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.btn{
+  width: 200px;
+  height: 40px;
+  font-size: 24px;
+  border-radius: 7px;
+  color: white;
+  background-color: #ff8a1d;
+  border: 1px solid rgba(255, 255, 255, 0.3);;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out,transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:hover {
+  background: #28AF60;
+}
+
+button:active {
+  transform: scale(1.1);
+  border-radius: 20px;
+}
+
+#logoutBtn{
+  background-color: #28AF60;
+  padding: 12px 20px;
+  border-radius: 5px;
+
+}
+#logoutBtn:hover{
+ background-color: #19222F;
+}
+
+/* ************* Responsive *************** */
+@media screen and (max-width:1224px){
+  .navbar-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .navbar-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+  }
+
+  .nav-link{
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .tables{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+
+  table td,
+  table th{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  table caption{
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+
+}
+
+@media screen and (max-width:768px){
+
+  .tables{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  table td,
+  table th{
+    font-size: 20px;
+  }
+
+  table caption{
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+}
+
+@media screen and (max-width:428px){
+
+
+  .tables{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  table td,
+  table th{
+    font-size: 20px;
+  }
+
+  table caption{
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+}
+
+@media screen and (max-width:320px){
+
+  .tables{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  table td,
+  table th{
+    font-size: 15px;
+  }
+
+  table caption{
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+}

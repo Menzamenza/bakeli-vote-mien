@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="toast.css">
+          <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.css"/>
+          <!-- responsive style -->
+    <link href="style/responsive.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="logo.png" type="image/svg+xml">
+
+    <title>Register</title>
+
+</head>
+<body>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/logo.png" alt="">
+            </a>
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a id="pad" style="color: white;font-weight:bold;" class="nav-link" href="index.html">Acceuil</a>
+                </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+    <form class="header" id="MainForm">
+
+      <h2>INSCRIPTION</h2>
+
+            <input class="inp" type="text" name="fnameInp" id="fnameInp" placeholder="Nom complet"><br>
+            <input class="inp" type="email" name="emailInp" id="emailInp" placeholder="Email@gmail.com"><br>
+            <input class="inp" type="password" name="passwordInp" id="passwordInp" placeholder="Mot de passe"><br>
+        <div class="probable">
+            <button   type="submit" class="button" id="submit">S'inscrire</button>
+  
+      
+        </div>
+    </form>
+
+    <script type="module" src="inscription.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+</html>

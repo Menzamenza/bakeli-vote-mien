@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/vote.css">
+    <link rel="stylesheet" href="toast.css">
+    <link rel="shortcut icon" href="logo.png" type="image/svg+xml">
+
+    <title>Page de Vote</title>
+</head>
+<body>
+        <!-- header section strats -->
+    <header class="header_section">
+        <div class="header_bottom">
+            <div class="container-fluid">
+                <nav class="navbar">
+                  <a class="navbar-brand" href="">
+                    <img src="images/logo.png" alt="">
+                  </a>
+                  <ul class="navbar-nav ">
+                      <li class="nav-item">
+    <a type="button" class="nav-link" id="logoutBtn" style="color: white;cursor: pointer;">Deconnexion</a>
+    <!-- <button style="cursor: pointer;" id="logoutBtn" >Deconnexion</button> -->
+                      </li>
+                  </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+          <!-- end header section -->
+    <main>
+        <div>
+            <h1>Eléction gouvernemental scolaire de Bakeli School</h1>
+        </div>
+        <div class="container">
+                <div class="tables">
+                    <form action="" method="POSt" class="table1">
+                        <div class="table">
+                            <table>
+                                <caption>Président</caption>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style="text-align: center;">Candidats</th>
+                                        <th style="text-align: center;"> Vote </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> NDIAYE</td>
+                                        <td  id="candidat2">Famara</td>
+                                        <td><input type="radio" name="president" id="vote1" value="1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SAKHO</td>
+                                        <td>Ismail</td>
+                                        <td><input type="radio" name="president" id="vote2" value="2"></td>
+                                    </tr>
+                                    <tr><td colspan="3"><div class="buttn"><button type="submit" class="btn" id="choisir">Votez</button></div></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <form action="" class="table2">
+                        <div class="table">
+                            <table>
+                                <caption>Sécrétaire genéral</caption>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style="text-align: center;">Candidats</th>
+                                        <th style="text-align: center;"> Vote </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>SOILIHI</td>
+                                        <td>Abdouroihmane</td>
+                                        <td><input type="radio" name="secretaire" id="secretaire1"  value="1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DIA</td>
+                                        <td>Binta</td>
+                                        <td><input type="radio" name="secretaire" id="secretaire2" value="2"></td>
+                                    </tr>
+                                    <tr><td colspan="3"><div class="buttn"><button type="submit" class="btn" id="choisirSG">Votez</button></div></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <form action="" class="table3">
+                        <div class="table">
+                            <table>
+                                <caption>Organisation</caption>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style="text-align: center;">Candidats</th>
+                                        <th style="text-align: center;"> Vote </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>DIOP</td>
+                                        <td>Khadija</td>
+                                        <td><input type="radio" name="organisation" id="organisation1" value="1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MBAYE</td>
+                                        <td>Saliou</td>
+                                        <td><input type="radio" name="organisation" id="organisation2" value="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SY</td>
+                                        <td>Fatima</td>
+                                        <td><input type="radio" name="organisation" id="organisation3" value="3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>GOUMBALA</td>
+                                        <td>Ndeye awa</td>
+                                        <td><input type="radio" name="organisation" id="organisation4" value="4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>COLY</td>
+                                        <td>Mariama</td>
+                                        <td><input type="radio" name="organisation" id="organisation5" value="5"></td>
+                                    </tr>
+                                    <tr><td colspan="3"><div class="buttn"><button type="submit" class="btn" id="choisirORG">Votez</button></div></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <form action="" class="table4">
+                        <div class="table">
+                            <table>
+                                <caption>Communication</caption>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style="text-align: center;">Candidats</th>
+                                        <th style="text-align: center;"> Vote </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>DIA</td>
+                                        <td>Nafissatou</td>
+                                        <td><input type="radio" name="communication" id="communication1" value="1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DOUCOURE</td>
+                                        <td>Mamadou</td>
+                                        <td><input type="radio" name="communication" id="communication2" value="2"></td>
+                                    </tr>
+                                    <tr><td colspan="3"><div class="buttn"><button type="submit" class="btn" id="choisirCOM">Votez</button></div></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <form action="" class="table5">
+                        <div class="table">
+                            <table>
+                                <caption>Trésorier</caption>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style="text-align: center;">Candidats</th>
+                                        <th style="text-align: center;"> Vote </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>SY</td>
+                                        <td>Falilou</td>
+                                        <td><input type="radio" name="tresorier" id="tresorier1" value="1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>BALDE</td>
+                                        <td>Mariama</td>
+                                        <td><input type="radio" name="tresorier" id="tresorier2" value="2"></td>
+                                    </tr>
+                                    <tr><td colspan="3"><div class="buttn"><button type="submit" class="btn" id="choisirTRES">Votez</button></div></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <form action="" class="table6">
+                        <div class="table">
+                            <table>
+                                <caption>Relation exterieur</caption>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style="text-align: center;">Candidats</th>
+                                        <th style="text-align: center;"> Vote </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>NDIAYE</td>
+                                        <td>Mariama</td>
+                                        <td><input type="radio" name="relation_ext" id="exterieur1" value="1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>NDIAYE</td>
+                                        <td>Ablaye</td>
+                                        <td><input type="radio" name="relation_ext" id="exterieur2" value="2"></td>
+                                    </tr>
+                                    <tr><td colspan="3"><div class="buttn"><button type="submit" class="btn" id="choisirEXT">Votez</button></div></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <form action="" class="table7">
+                        <div class="table">
+                            <table>
+                                <caption>Pédagogie</caption>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style="text-align: center;">Candidats</th>
+                                        <th style="text-align: center;"> Vote </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>GUEYE</td>
+                                        <td>Fabintou</td>
+                                        <td><input type="radio" name="pedagogie" id="pedagogie1" value="1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MENDY</td>
+                                        <td>Veronic</td>
+                                        <td><input type="radio" name="pedagogie" id="pedagogie2" value="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>NDIAYE</td>
+                                        <td>Boubacar</td>
+                                        <td><input type="radio" name="pedagogie" id="pedagogie3" value="3"></td>
+                                    </tr>
+                                    <tr><td colspan="3"><div class="buttn"><button type="submit" class="btn" id="choisirPEDA">Votez</button></div></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <form action="" class="table8">
+                        <div class="table">
+                            <table>
+                                <caption>Sport & loisir</caption>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style="text-align: center;">Candidats</th>
+                                        <th style="text-align: center;"> Vote </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>DIOP</td>
+                                        <td>Madiguene</td>
+                                        <td><input type="radio" name="loisir" id="sport1" value="1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DIALLO</td>
+                                        <td>Babacar</td>
+                                        <td><input type="radio" name="loisir" id="sport2" value="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SECK</td>
+                                        <td>Moustapha</td>
+                                        <td><input type="radio" name="loisir" id="sport3" value="3"></td>
+                                        <tr><td colspan="3"><div class="buttn"><button type="submit" class="btn" id="choisirSPORT">Votez</button></div></td></tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script type="module" src="srciptVote.js" defer></script>
+    <script type="module" src="deconnexion.js" defer></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js"></script>
+
+    <!-- Ensuite, inclure votre script de configuration Firebase et de déconnexion -->
+    <!-- <script src="config-firebase.js"></script> -->
+    <!-- <script type="module" src="deconnexion.js" defer></script> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

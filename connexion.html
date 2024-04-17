@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+          <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.css"/>
+          <!-- responsive style -->
+    <link href="style/responsive.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="logo.png" type="image/svg+xml">
+
+    <title>Login</title>
+</head>
+<body>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <form class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/logo.png" alt="">
+            </a>
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a id="pad" style="color: white;font-weight: bold;" class="nav-link" href="index.html">Acceuil</a>
+                </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+    <form class="header" id="MainForm">
+
+        </div>
+            <h1 id="h1"> Bienvenue à <em class="bak" style="color: #28AF60;">BAKELI</em> <em class="vote"> VOTE &#x1F91D;
+
+            </em></h1>
+            <p>Connectez-vous</p>
+            <input class="inp" type="email" name="emailInp" id="emailInp" placeholder="Email"><br>
+            <input class="inp" type="password" name="passwordInp" id="passwordInp" placeholder="Mot de passe"><br>
+        <div class="probable">
+            <button type="submit" id="submit"  class="button">Se Connecter</button><br>
+            <a id="forgotpasswordlabel" class="m-oublie" style="color: #28AF60;">Mot de pass oublié?</a>
+        </div>
+        <div class="fiable">
+          Vous n’avez pas de compte ? <a style="color: #28AF60;" href="inscription.html">Inscrivez-vous</a>    
+        </div>
+    </form>
+
+    <script type="module" src="connexion.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>    
+</body>
+</html>
