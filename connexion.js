@@ -61,6 +61,7 @@ submit.addEventListener("click", function(event) {
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     const user = userCredential.user;
+    // console.log(user, "c'est l'utilisateur");
     showToast('success', 'Connexion réussie!', 'Vous êtes maintenant connecté.');
     // Vérifier si l'utilisateur est un administrateur
     if (email === 'adminMariama@gmail.com' || email=== 'adminMoustapha@gmail.com') {

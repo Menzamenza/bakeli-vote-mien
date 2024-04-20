@@ -2,7 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
 import { getFirestore, collection, getDocs,getDoc,doc,updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
 
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+import { getAuth,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,6 +18,44 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth=getAuth(app)
 const db = getFirestore(app);
+
+// onAuthStateChanged(auth, (user) => {
+//   const uid = user.uid;
+//   console.log(uid, 'test');
+//   if (user.uid!=uid) {
+//     // User is signed in, see docs for a list of available properties
+//     // console.log(uid);
+//     // window.location.href = 'vote.html'; // Redirection après connexion réussie
+
+//     alert('connectel')
+//   } else {
+//     // User is signed out
+//   }
+// });
+
+// // Ajoutez cet écouteur pour détecter les changements d'état d'authentification
+// app.auth().onAuthStateChanged(function(user) {
+//   if (user) {
+//     // Utilisateur connecté, permettre l'accès à la page vote.html
+//     window.location.href = "vote.html";
+//   } else {
+//     // Utilisateur non connecté, rediriger vers la page d'accueil ou de connexion
+//     // window.location.href = "index.html"; // Redirection vers la page d'accueil
+//     alert('non connecté')
+//   }
+// });
+
+
+const user = auth.currentUser;
+if (user !== user.uid) {
+  // The user object has basic properties such as display name, email, etc.
+  console.log('vous êtes connecté');
+  window.location.href = "vote.html";
+
+}else{
+    window.location.href = "index.html";
+}
+
 
 // Référence au bouton "choisir"
 let button = document.getElementById('choisir');
