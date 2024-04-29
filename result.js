@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
 import { getFirestore, collection, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+import { getAuth} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCcb59JqDUcxm80sdoCCC_3RoeZ4lBQdGA",
@@ -10,7 +11,10 @@ const firebaseConfig = {
     appId: "1:752099241013:web:83fc6071dd7a04b8f1157c",
   };
 
+
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth=getAuth(app)
 const db = getFirestore(app);
 
 
@@ -39,6 +43,16 @@ const documentsToFetch = [
     { collection: "sport", id: "3", targetElementId: "voiceSPORT3" },
     // Ajoutez d'autres objets pour chaque document supplémentaire que vous souhaitez récupérer
 ];
+
+// Ensure that this check happens whenever the page is loaded or refreshed
+window.onload = function() {
+    const user = auth.currentUser;
+    if (!user) {
+      // User is not authenticated, redirect to index.html
+      window.location.href = 'index.html';
+    }
+  };
+
 
 // Fonction pour récupérer les données d'un document
 async function fetchDocumentData(documentInfo) {

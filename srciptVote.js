@@ -19,43 +19,15 @@ const app = initializeApp(firebaseConfig);
 const auth=getAuth(app)
 const db = getFirestore(app);
 
-// onAuthStateChanged(auth, (user) => {
-//   const uid = user.uid;
-//   console.log(uid, 'test');
-//   if (user.uid!=uid) {
-//     // User is signed in, see docs for a list of available properties
-//     // console.log(uid);
-//     // window.location.href = 'vote.html'; // Redirection après connexion réussie
 
-//     alert('connectel')
-//   } else {
-//     // User is signed out
-//   }
-// });
-
-// // Ajoutez cet écouteur pour détecter les changements d'état d'authentification
-// app.auth().onAuthStateChanged(function(user) {
-//   if (user) {
-//     // Utilisateur connecté, permettre l'accès à la page vote.html
-//     window.location.href = "vote.html";
-//   } else {
-//     // Utilisateur non connecté, rediriger vers la page d'accueil ou de connexion
-//     // window.location.href = "index.html"; // Redirection vers la page d'accueil
-//     alert('non connecté')
-//   }
-// });
-
-
-const user = auth.currentUser;
-if (user !== user.uid) {
-  // The user object has basic properties such as display name, email, etc.
-  console.log('vous êtes connecté');
-  window.location.href = "vote.html";
-
-}else{
-    window.location.href = "index.html";
-}
-
+// Ensure that this check happens whenever the page is loaded or refreshed
+window.onload = function() {
+  const user = auth.currentUser;
+  if (!user) {
+    // User is not authenticated, redirect to index.html
+    window.location.href = 'index.html';
+  }
+};
 
 // Référence au bouton "choisir"
 let button = document.getElementById('choisir');
