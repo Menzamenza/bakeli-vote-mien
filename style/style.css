@@ -175,6 +175,7 @@ a:focus {
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
+  white-space: nowrap;
 }
 
 .button:hover{
@@ -314,7 +315,7 @@ select{
       background-color: #009688;
       color: white;
       border: none;
-      width: 80%;
+      /* width: 80%; */
       height: 30px;
       font-size: 100%;
   }
@@ -336,13 +337,14 @@ select{
       padding: 10px;
   }
   .m-oublie{
-      padding: 20px;
       text-align: center;
+      white-space: nowrap;
   }
   .fiable{
       width: 100%;
       padding: 2%;
       text-align: center;
+      white-space: nowrap;
   }
   .envoie{
       width: 30%;
