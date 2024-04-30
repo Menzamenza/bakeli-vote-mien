@@ -153,6 +153,7 @@ body {
 .btn-group {
   display: flex;
   flex-wrap: wrap;
+  white-space: nowrap;
   justify-content: center;
   align-items: center;
   gap: 35px;

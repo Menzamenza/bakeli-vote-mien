@@ -1,19 +1,19 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 
 import {
   getAuth,
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
-} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCcb59JqDUcxm80sdoCCC_3RoeZ4lBQdGA",
-  authDomain: "base-de-vote.firebaseapp.com",
-  projectId: "base-de-vote",
-  storageBucket: "base-de-vote.appspot.com",
-  messagingSenderId: "752099241013",
-  appId: "1:752099241013:web:83fc6071dd7a04b8f1157c",
+  apiKey: "AIzaSyB4-LJPRzgkYZBim1lgTLo3SJZeV5hmByY",
+  authDomain: "base-de-vote-2.firebaseapp.com",
+  projectId: "base-de-vote-2",
+  storageBucket: "base-de-vote-2.appspot.com",
+  messagingSenderId: "175903625451",
+  appId: "1:175903625451:web:dfec0d9e966f2f5d8d2eae"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -30,7 +30,7 @@ submit.addEventListener("click", function(event){
     signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed up 
-    if (email === "adminMoustapha@gmail.com" || email === "adminMariama@gmail.com") {
+    if (email === "menzaFirebase@gmail.com" || email === "adminMariama@gmail.com") {
       window.location.href='resultat-vote.html'
     } else {
       

@@ -1,19 +1,18 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 
 import {
   getAuth,
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
-} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCcb59JqDUcxm80sdoCCC_3RoeZ4lBQdGA",
-  authDomain: "base-de-vote.firebaseapp.com",
-  projectId: "base-de-vote",
-  storageBucket: "base-de-vote.appspot.com",
-  messagingSenderId: "752099241013",
-  appId: "1:752099241013:web:83fc6071dd7a04b8f1157c",
+  apiKey: "AIzaSyB4-LJPRzgkYZBim1lgTLo3SJZeV5hmByY",
+  authDomain: "base-de-vote-2.firebaseapp.com",
+  projectId: "base-de-vote-2",
+  storageBucket: "base-de-vote-2.appspot.com",
+  messagingSenderId: "175903625451",
+  appId: "1:175903625451:web:dfec0d9e966f2f5d8d2eae"
 };
 //
 const app = initializeApp(firebaseConfig);
@@ -48,6 +47,37 @@ function showToast(icon, title, text) {
   });
 }
 
+// Fonction pour gérer la connexion de l'utilisateur après l'inscription et la vérification de l'e-mail
+async function handleLogin(email, password) {
+  try {
+      // Connecter l'utilisateur avec Firebase Authentication
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Vérifier si l'e-mail de l'utilisateur a été vérifié
+      if (user && !user.emailVerified) {
+          showToast('warning', 'Vérification requise', 'Veuillez vérifier votre adresse e-mail avant de vous connecter.');
+          // Déconnecter l'utilisateur
+          await auth.signOut();
+      } else {
+          // Rediriger l'utilisateur vers la page appropriée
+          showToast('success', 'Connexion réussie!');
+          window.location.href = 'vote.html';       }
+  } catch (error) {
+      // Gérer les erreurs d'authentification
+      const errorMessage = handleAuthError(error);
+      showToast('error', 'Erreur de connexion', errorMessage);
+  }
+}
+
+// Fonction pour rediriger l'utilisateur en fonction de son type (admin ou utilisateur normal)
+function redirectToPage(email) {
+  if (email === 'menzaFirebase@gmail.com' || email === 'adminMoustapha@gmail.com') {
+      window.location.href = 'resultat-vote.html'; // Redirection vers la page d'administration
+  } else {
+      window.location.href = 'vote.html'; // Redirection vers la page de vote pour les utilisateurs normaux
+  }
+}
 // Écouteur d'événement pour le formulaire de connexion
 const submit = document.getElementById('submit');
 submit.addEventListener("click", function(event) {
@@ -57,27 +87,9 @@ submit.addEventListener("click", function(event) {
   const email = document.getElementById('emailInp').value;
   const password = document.getElementById('passwordInp').value;
 
-  // Connexion avec Firebase Authentication
-  signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    const user = userCredential.user;
-    // console.log(user, "c'est l'utilisateur");
-    showToast('success', 'Connexion réussie!', 'Vous êtes maintenant connecté.');
-    // Vérifier si l'utilisateur est un administrateur
-    if (email === 'adminMariama@gmail.com' || email=== 'adminMoustapha@gmail.com') {
-      // Rediriger vers la page d'administration
-      window.location.href = 'resultat-vote.html';
-      } else {
-      // Rediriger vers la page de connexion normale
-      window.location.href = 'vote.html'; // Redirection après connexion réussie
-    }
-  })
-  .catch((error) => {
-    const errorMessage = handleAuthError(error); // Utilisation de la fonction handleAuthError
-    showToast('error', 'Erreur de connexion', errorMessage);
-  });
+  // Connexion avec Firebase Authentication et gestion de la connexion avec la fonction handleLogin
+  handleLogin(email, password);
 });
-
 // Écouteur d'événement pour le lien "Mot de passe oublié"
 const reset = document.getElementById('forgotpasswordlabel');
 reset.addEventListener('click', function(e) {

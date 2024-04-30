@@ -1,14 +1,14 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-import { getFirestore, collection, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
-import { getAuth} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import { getFirestore, collection, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { getAuth,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCcb59JqDUcxm80sdoCCC_3RoeZ4lBQdGA",
-    authDomain: "base-de-vote.firebaseapp.com",
-    projectId: "base-de-vote",
-    storageBucket: "base-de-vote.appspot.com",
-    messagingSenderId: "752099241013",
-    appId: "1:752099241013:web:83fc6071dd7a04b8f1157c",
+    apiKey: "AIzaSyB4-LJPRzgkYZBim1lgTLo3SJZeV5hmByY",
+    authDomain: "base-de-vote-2.firebaseapp.com",
+    projectId: "base-de-vote-2",
+    storageBucket: "base-de-vote-2.appspot.com",
+    messagingSenderId: "175903625451",
+    appId: "1:175903625451:web:dfec0d9e966f2f5d8d2eae"
   };
 
 
@@ -16,6 +16,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth=getAuth(app)
 const db = getFirestore(app);
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const uid = user.uid;
+    // console.log(uid);
+  } else {
+    // User is signed out
+    // ...
+    window.location.href='index.html';
+  }
+});
 
 
 // Définir un tableau d'objets contenant les informations sur les documents à récupérer
@@ -45,13 +56,13 @@ const documentsToFetch = [
 ];
 
 // Ensure that this check happens whenever the page is loaded or refreshed
-window.onload = function() {
-    const user = auth.currentUser;
-    if (!user) {
-      // User is not authenticated, redirect to index.html
-      window.location.href = 'index.html';
-    }
-  };
+// window.onload = function() {
+//     const user = auth.currentUser;
+//     if (!user) {
+//       // User is not authenticated, redirect to index.html
+//       window.location.href = 'index.html';
+//     }
+//   };
 
 
 // Fonction pour récupérer les données d'un document

@@ -1,33 +1,35 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-import { getFirestore, collection, getDocs,getDoc,doc,updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import { getFirestore, collection, getDocs,getDoc,doc,updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
-import { getAuth,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+import { getAuth,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCcb59JqDUcxm80sdoCCC_3RoeZ4lBQdGA",
-  authDomain: "base-de-vote.firebaseapp.com",  
-  projectId: "base-de-vote",
-  storageBucket: "base-de-vote.appspot.com",
-  messagingSenderId: "752099241013",
-  appId: "1:752099241013:web:83fc6071dd7a04b8f1157c"
+  apiKey: "AIzaSyB4-LJPRzgkYZBim1lgTLo3SJZeV5hmByY",
+  authDomain: "base-de-vote-2.firebaseapp.com",
+  projectId: "base-de-vote-2",
+  storageBucket: "base-de-vote-2.appspot.com",
+  messagingSenderId: "175903625451",
+  appId: "1:175903625451:web:dfec0d9e966f2f5d8d2eae"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth=getAuth(app)
 const db = getFirestore(app);
 
-
-// Ensure that this check happens whenever the page is loaded or refreshed
-window.onload = function() {
-  const user = auth.currentUser;
-  if (!user) {
-    // User is not authenticated, redirect to index.html
-    window.location.href = 'index.html';
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const uid = user.uid;
+    // console.log(uid);
+  } else {
+    // User is signed out
+    // ...
+    window.location.href='index.html';
   }
-};
+});
+
+
 
 // Référence au bouton "choisir"
 let button = document.getElementById('choisir');
