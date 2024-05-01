@@ -62,7 +62,9 @@ async function handleLogin(email, password) {
       } else {
           // Rediriger l'utilisateur vers la page appropriée
           showToast('success', 'Connexion réussie!');
-          window.location.href = 'vote.html';       }
+          // window.location.href = 'vote.html';      
+          redirectToPage(email)
+         }
   } catch (error) {
       // Gérer les erreurs d'authentification
       const errorMessage = handleAuthError(error);
@@ -89,7 +91,6 @@ submit.addEventListener("click", function(event) {
 
   // Connexion avec Firebase Authentication et gestion de la connexion avec la fonction handleLogin
   handleLogin(email, password);
-  redirectToPage(email)
 });
 // Écouteur d'événement pour le lien "Mot de passe oublié"
 const reset = document.getElementById('forgotpasswordlabel');
