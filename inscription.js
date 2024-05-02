@@ -87,7 +87,7 @@ submit.addEventListener("click", async function(event){
             timer: 8000 // Durée du toast en millisecondes (4 secondes)
         }).then(() => {
             // Vérifier si l'utilisateur est un administrateur
-            if (email === 'menzaFirebase@gmail.com' || email === 'adminMoustapha@gmail.com') {
+            if (email === 'menzaFirebase@gmail.com' || email === 'seckmoustapha238@gmail.com') {
                  // Rediriger vers la page d'administration
                  window.location.href = 'admin.html';
             } else {

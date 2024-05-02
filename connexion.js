@@ -73,7 +73,7 @@ async function handleLogin(email, password) {
 
 // Fonction pour rediriger l'utilisateur en fonction de son type (admin ou utilisateur normal)
 function redirectToPage(email) {
-  if (email === 'menzaFirebase@gmail.com' || email === 'adminMoustapha@gmail.com') {
+  if (email === 'menzaFirebase@gmail.com' || email === 'seckmoustapha238@gmail.com') {
       window.location.href = 'resultat-vote.html'; // Redirection vers la page d'administration
   } else {
       window.location.href = 'vote.html'; // Redirection vers la page de vote pour les utilisateurs normaux
