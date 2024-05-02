@@ -23,7 +23,7 @@ const auth = getAuth(app);
 function handleAuthError(error) {
   let errorMessage = error.message;
   if (errorMessage.includes('auth/invalid-credential')) {
-    errorMessage = 'Identifiants invalides. Veuillez vérifier votre email et votre mot de passe.';
+    errorMessage = 'Identifiants invalides. Veuillez vérifier votre email ou votre mot de passe.';
   } else if (errorMessage.includes('auth/invalid-email')) {
     errorMessage = 'Adresse e-mail invalide.';
   } else if (errorMessage.includes('auth/user-not-found')) {
@@ -62,7 +62,6 @@ async function handleLogin(email, password) {
       } else {
           // Rediriger l'utilisateur vers la page appropriée
           showToast('success', 'Connexion réussie!');
-          // window.location.href = 'vote.html';      
           redirectToPage(email)
          }
   } catch (error) {
